@@ -1,0 +1,72 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://Characters/ThiefBody.gd" type="Script" id=1]
+[ext_resource path="res://Animations/Skeleton/idle/idle_2.png" type="Texture" id=2]
+[ext_resource path="res://Animations/Skeleton/idle/idle_3.png" type="Texture" id=3]
+[ext_resource path="res://Animations/Skeleton/idle/idle_4.png" type="Texture" id=4]
+[ext_resource path="res://Animations/Skeleton/idle/idle_5.png" type="Texture" id=5]
+[ext_resource path="res://Animations/Skeleton/idle/idle_6.png" type="Texture" id=6]
+[ext_resource path="res://Animations/Skeleton/idle/idle_1.png" type="Texture" id=7]
+[ext_resource path="res://Animations/Skeleton/walk/go_1.png" type="Texture" id=8]
+[ext_resource path="res://Animations/Skeleton/walk/go_2.png" type="Texture" id=9]
+[ext_resource path="res://Animations/Skeleton/walk/go_3.png" type="Texture" id=10]
+[ext_resource path="res://Animations/Skeleton/walk/go_4.png" type="Texture" id=11]
+[ext_resource path="res://Animations/Skeleton/walk/go_5.png" type="Texture" id=12]
+[ext_resource path="res://Animations/Skeleton/walk/go_6.png" type="Texture" id=13]
+[ext_resource path="res://Animations/Skeleton/walk/go_7.png" type="Texture" id=14]
+[ext_resource path="res://Animations/Skeleton/walk/go_8.png" type="Texture" id=15]
+
+
+
+
+
+[sub_resource type="Curve2D" id=1]
+_data = {
+"points": PoolVector2Array( 0, 0, 0, 0, 466.862, -89.2677, 0, 0, 0, 0, 10.4234, -41.8992, 0, 0, 0, 0, -556.351, 15.5801, 0, 0, 0, 0, -142.386, -26.9503, 0, 0, 0, 0, 70.1139, -48.6259 )
+}
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 10, 9.2094 )
+
+[node name="Thief" type="Node2D"]
+rotation = -3.03948
+scale = Vector2( 0.7, 0.7 )
+
+[node name="Path2D" type="Path2D" parent="."]
+position = Vector2( 115.801, 29.5627 )
+curve = SubResource( 1 )
+
+[node name="ThiefBody" type="KinematicBody2D" parent="Path2D"]
+position = Vector2( -112.165, -27.3052 )
+rotation = 3.04875
+scale = Vector2( 0.999999, 0.999999 )
+collision_layer = 8
+collision_mask = 4
+script = ExtResource( 1 )
+speed = 108
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="Path2D/ThiefBody"]
+position = Vector2( 32.6497, -6.38827 )
+rotation = -1.49012e-08
+frames = SubResource( 2 )
+animation = "walk"
+frame = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/ThiefBody"]
+position = Vector2( -0.138695, 0.479156 )
+rotation = -8.87484e-09
+scale = Vector2( 6.71613, 19.0795 )
+shape = SubResource( 3 )

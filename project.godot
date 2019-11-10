@@ -15,9 +15,9 @@ _global_script_class_icons={
 
 [application]
 
-config/name="New Game Project"
-run/main_scene="res://all/Main.tscn"
-config/icon="res://anim/Roll/icon.png"
+config/name="Platformer2D"
+run/main_scene="res://Main.tscn"
+config/icon="res://Animations/Roll/icon.png"
 
 [display]
 
@@ -63,4 +63,4 @@ spell_1={
 
 [rendering]
 
-environment/default_environment="res://all/default_env.tres"
+environment/default_environment="res://default_env.tres"

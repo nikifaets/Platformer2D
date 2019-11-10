@@ -1,0 +1,76 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Characters/Player/Player.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Environment/Floor1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Environment/Floor.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Characters/Thief.tscn" type="PackedScene" id=4]
+
+[node name="Main" type="Node2D"]
+__meta__ = {
+"_edit_horizontal_guides_": [  ],
+"_edit_vertical_guides_": [  ]
+}
+
+[node name="Stickman" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1081.05, 467.645 )
+
+[node name="Camera2D" type="Camera2D" parent="Stickman"]
+position = Vector2( -2.73767, -107.397 )
+scale = Vector2( 5.49524, -19.9168 )
+current = true
+
+[node name="Floor" type="Node2D" parent="."]
+editor/display_folded = true
+position = Vector2( 48.4043, 40.3367 )
+
+[node name="Node2D2" parent="Floor" instance=ExtResource( 2 )]
+position = Vector2( 664.482, 500.805 )
+rotation = -0.497553
+
+[node name="Node2D9" parent="Floor" instance=ExtResource( 2 )]
+position = Vector2( 4953.12, 225.763 )
+rotation = 0.065256
+
+[node name="Node2D10" parent="Floor" instance=ExtResource( 2 )]
+position = Vector2( 664.482, 500.805 )
+rotation = -0.497553
+
+[node name="Node2D11" parent="Floor" instance=ExtResource( 2 )]
+position = Vector2( 664.482, 500.805 )
+rotation = -0.497553
+
+[node name="Node2D14" parent="Floor" instance=ExtResource( 2 )]
+position = Vector2( 7504.82, 343.651 )
+rotation = -1.2479
+
+[node name="Node2D" parent="Floor" instance=ExtResource( 3 )]
+position = Vector2( 3890.67, 947.095 )
+scale = Vector2( 7.6, 1 )
+
+[node name="Node2D3" parent="Floor" instance=ExtResource( 3 )]
+position = Vector2( 2013.75, 928.545 )
+
+[node name="Node2D4" parent="Floor" instance=ExtResource( 3 )]
+position = Vector2( 1878.59, 740.393 )
+
+[node name="Node2D5" parent="Floor" instance=ExtResource( 3 )]
+position = Vector2( 3349.36, 872.894 )
+
+[node name="Node2D6" parent="Floor" instance=ExtResource( 3 )]
+position = Vector2( 2962.46, 552.24 )
+
+[node name="Node2D7" parent="Floor" instance=ExtResource( 3 )]
+position = Vector2( 3860.82, 313.737 )
+
+[node name="Node2D8" parent="Floor" instance=ExtResource( 3 )]
+position = Vector2( 4655.83, 674.142 )
+
+[node name="Node2D12" parent="Floor" instance=ExtResource( 3 )]
+position = Vector2( 5694.64, 859.644 )
+
+[node name="Node2D13" parent="Floor" instance=ExtResource( 3 )]
+position = Vector2( 6683.1, 578.741 )
+
+[node name="Thief" parent="." instance=ExtResource( 4 )]
+position = Vector2( 3072.09, 435.643 )
+rotation = -3.03003

@@ -1,0 +1,34 @@
+[remap]
+
+importer="texture"
+type="StreamTexture"
+path="res://.import/670007.png-5e3def5e43633bdb1dcd8523f8edd546.stex"
+metadata={
+"vram_texture": false
+}
+
+[deps]
+
+source_file="res://Animations/Effects/67/670007.png"
+dest_files=[ "res://.import/670007.png-5e3def5e43633bdb1dcd8523f8edd546.stex" ]
+
+[params]
+
+compress/mode=0
+compress/lossy_quality=0.7
+compress/hdr_mode=0
+compress/bptc_ldr=0
+compress/normal_map=0
+flags/repeat=0
+flags/filter=true
+flags/mipmaps=false
+flags/anisotropic=false
+flags/srgb=2
+process/fix_alpha_border=true
+process/premult_alpha=false
+process/HDR_as_SRGB=false
+process/invert_color=false
+stream=false
+size_limit=0
+detect_3d=true
+svg/scale=1.0
